@@ -7,10 +7,14 @@ spring:
     gateway:
       mvc:
         routes:
-        - id: artistmicroservice
-          uri: lb://artistmicroservice
+        - id: UserMicroservice
+          uri: lb://UserMicroservice
           predicates:
-            - Path=/api/v5/**
+            - Path=/v2/**
+        - id: MediaMicroservice
+          uri: lb://MediaMicroservice
+          predicates:
+            - Path=/v1/**
 
 
 
