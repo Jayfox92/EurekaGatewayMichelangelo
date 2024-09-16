@@ -10,11 +10,11 @@ spring:
         - id: UserMicroservice
           uri: lb://UserMicroservice
           predicates:
-            - Path=/v2/**
+            - Path=/user/**
         - id: MediaMicroservice
           uri: lb://MediaMicroservice
           predicates:
-            - Path=/v1/**
+            - Path=/media/**
 
 
 
